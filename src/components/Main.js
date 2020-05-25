@@ -1,6 +1,7 @@
 import React from "react";
-import { Sidebar } from "./sidebar/Sidebar";
-import { Calender } from "./calender/Calender";
+import { Sidebar } from "../pages/sidebar/Sidebar";
+import { Calender } from "./calender/calender.component";
+import { useSelector } from "react-redux";
 
 export const Main = () => {
   return (

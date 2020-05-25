@@ -1,7 +1,7 @@
 import { SEARCH_EVENT } from "../types";
 
 const INTITIAL_STATE = {
-  event: null,
+  event: [],
 };
 
 const searchEventReducer = (state = INTITIAL_STATE, action) => {
