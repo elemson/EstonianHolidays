@@ -16,6 +16,8 @@ I used the following modules:
 - `create-react-app`: https://github.com/facebookincubator/create-react-app
 - `axios`: https://www.npmjs.com/package/axios
 - `bootstrap`: https://getbootstrap.com/
+
+- `dotenv` : https://www.npmjs.com/package/dotenv
 - `moment`: https://momentjs.com/
 - `react-redux`: https://react-redux.js.org/introduction/quick-start
 - `redux`: https://redux.js.org/
