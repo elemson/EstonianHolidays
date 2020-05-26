@@ -1,7 +1,7 @@
 import { SEARCH_EVENT } from "../types";
 import axios from "axios";
 
-export const searchEvent = (event) => (dispatch) => {
+export const requestEvent = (event) => (dispatch) => {
   console.log(event);
   axios
     .post(

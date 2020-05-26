@@ -1,39 +1,37 @@
-import React, { useState, useEffect, useCallback } from "react";
-import SearchForm from "../../pages/event-input/event-input-form";
+import React, { useState, useEffect } from "react";
+
 import moment from "moment";
-import { searchEvent } from "../../redux/event/event.actions";
+import { requestEvent } from "../../redux/event/event.actions";
 import { useDispatch } from "react-redux";
+import { weekRange } from "../../utils/weekRange";
 
 const EventInput = () => {
   const dispatch = useDispatch();
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(
-    new Date(new Date().setMonth(startDate.getMonth() + 1))
-  );
 
-  const setEvent = useCallback(() => {
-    // "apiKey": "_API_KEY"
-    let start = "";
-    let end = "";
+  let start = weekRange(2, "before");
+  const [startDate, setStartDate] = useState(start);
 
-    start = `${moment(startDate).format("YYYY-MM-DD")}`;
-    end = `${moment(endDate).format("YYYY-MM-DD")}`;
+  let end = weekRange(2, "after");
+  const [endDate, setEndDate] = useState(end);
 
-    const event = {
-      apiKey: "d974b1989b20a58721d3bf38671c3951",
-      startDate: start,
-      endDate: end,
-    };
+  //Format date to "YYYY-MM-DD" with moment
+  start = `${moment(startDate).format("YYYY-MM-DD")}`;
+  end = `${moment(endDate).format("YYYY-MM-DD")}`;
 
-    return event;
-  });
-
+  //Dispatch redux action on component mount
   useEffect(() => {
-    const event = setEvent();
-    //add event to events array using context
+    const setEvent = () => {
+      const event = {
+        apiKey: process.env.REACT_APP_API_KEY,
+        startDate: start,
+        endDate: end,
+      };
 
-    dispatch(searchEvent(event));
-  }, [dispatch, setEvent]);
+      return event;
+    };
+    const event = setEvent();
+    dispatch(requestEvent(event));
+  }, [dispatch, end, start]);
 
   return <></>;
 };

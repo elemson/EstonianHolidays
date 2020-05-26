@@ -1,7 +1,8 @@
 import React from "react";
-import { Sidebar } from "../pages/sidebar/Sidebar";
+
 import { Calender } from "./calender/calender.component";
-import { useSelector } from "react-redux";
+
+import EventInput from "./eventInput/event-Input.component";
 
 export const Main = () => {
   return (
@@ -12,7 +13,7 @@ export const Main = () => {
             <div className="card">
               <div className="card-body">
                 <div className="row">
-                  <Sidebar />
+                  <EventInput />
                   <Calender />
                 </div>
               </div>
