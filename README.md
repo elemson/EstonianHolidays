@@ -1,8 +1,8 @@
 # ESTONIAN CALENDER
 
-## Demo
 
-[demo](`https://master.d13q0mzo5ovp90.amplifyapp.com/`)
+
+- `## Demo` : https://master.d13q0mzo5ovp90.amplifyapp.com/
 
 This web app shows a week's calendar.
 The calendar displays the date and weekday of each day and the names of all the events that exist for that day. The events are Estonian public holidays and holidays from the Estonian Folk Calendar (Eesti Rahvakalender). Public holidays and folk calendar events are displayed differently.
