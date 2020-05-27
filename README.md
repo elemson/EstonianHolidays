@@ -1,5 +1,9 @@
 # ESTONIAN CALENDER
 
+## Demo
+
+[demo](`https://master.d13q0mzo5ovp90.amplifyapp.com/`)
+
 This web app shows a week's calendar.
 The calendar displays the date and weekday of each day and the names of all the events that exist for that day. The events are Estonian public holidays and holidays from the Estonian Folk Calendar (Eesti Rahvakalender). Public holidays and folk calendar events are displayed differently.
 
@@ -14,6 +18,7 @@ Please note, that the API returns no more than 30 days of holidays in one call. 
 I used the following modules:
 
 - `create-react-app`: https://github.com/facebookincubator/create-react-app
+- `fullcalendar.io/`: http://fullcalendar.io/
 - `axios`: https://www.npmjs.com/package/axios
 - `bootstrap`: https://getbootstrap.com/
 
@@ -79,4 +84,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `Deployment`
+
+This app was deployed with AWS Amplify
